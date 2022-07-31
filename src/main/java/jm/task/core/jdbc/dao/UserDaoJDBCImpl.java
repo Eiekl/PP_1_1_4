@@ -18,7 +18,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
 
-    public UserDaoJDBCImpl() throws SQLException {
+    public UserDaoJDBCImpl() {
 
     }
 
@@ -28,7 +28,7 @@ public class UserDaoJDBCImpl implements UserDao {
                 "lastName varchar(30), " +
                 "age smallint, " +
                 "PRIMARY KEY (id))";
-        try (Statement statement = connection.createStatement();) {
+        try (Statement statement = connection.createStatement()) {
             connection.setAutoCommit(false);
             statement.executeUpdate(createTable);
             connection.commit();
@@ -40,7 +40,7 @@ public class UserDaoJDBCImpl implements UserDao {
     public void dropUsersTable() {
         String dropTable = "drop table if exists users";
 
-        try (Statement statement = connection.createStatement();) {
+        try (Statement statement = connection.createStatement()) {
             connection.setAutoCommit(false);
             statement.executeUpdate(dropTable);
             connection.commit();

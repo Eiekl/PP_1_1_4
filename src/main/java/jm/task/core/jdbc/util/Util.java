@@ -11,7 +11,6 @@ public class Util {
     private static final String PASSWORD = "root";
 
     public static Connection getConnection() throws SQLException {
-        Connection connection = DriverManager.getConnection(URL,USERNAME, PASSWORD);
-        return connection;
+        return DriverManager.getConnection(URL,USERNAME, PASSWORD);
     }
 }
