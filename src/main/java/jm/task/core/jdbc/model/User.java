@@ -12,6 +12,16 @@ public class User {
     @Column
     private String name;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     @Column
     private String lastName;
 
@@ -60,8 +70,5 @@ public class User {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return String.format("name: %s, lastName: %s, age: %s./n", getName(), getLastName(), getAge());
-    }
+
 }
