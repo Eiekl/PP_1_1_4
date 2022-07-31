@@ -23,7 +23,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void createUsersTable() {
-        String createTable = "create table  if not exists users (id serial," +
+        String createTable = "create table if not exists users (id serial," +
                 "name varchar(20)," +
                 "lastName varchar(30), " +
                 "age smallint, " +
